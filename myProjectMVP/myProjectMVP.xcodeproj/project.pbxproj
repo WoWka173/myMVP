@@ -16,6 +16,9 @@
 		190B90EA2852303800A015A2 /* TableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90E92852303800A015A2 /* TableViewCustomCell.swift */; };
 		190B90EF2852368400A015A2 /* Eat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90EE2852368400A015A2 /* Eat.swift */; };
 		190B90F22852378300A015A2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90F12852378300A015A2 /* Network.swift */; };
+		191980462855F4990023D880 /* CollectionMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191980452855F4990023D880 /* CollectionMenuPresenter.swift */; };
+		191980482855F4C00023D880 /* CollectionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191980472855F4C00023D880 /* CollectionMenuViewController.swift */; };
+		1919804A2855F4FA0023D880 /* CollectionViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191980492855F4FA0023D880 /* CollectionViewCustomCell.swift */; };
 		197ED6082853918F002F7CD9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 197ED6072853918F002F7CD9 /* SnapKit */; };
 		199A26962853C09900FACB74 /* DetailTableViewModulePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A26952853C09900FACB74 /* DetailTableViewModulePresentor.swift */; };
 		199A26982853C0EF00FACB74 /* DetailTableViewModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A26972853C0EF00FACB74 /* DetailTableViewModuleViewController.swift */; };
@@ -37,6 +40,9 @@
 		190B90E92852303800A015A2 /* TableViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCustomCell.swift; sourceTree = "<group>"; };
 		190B90EE2852368400A015A2 /* Eat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat.swift; sourceTree = "<group>"; };
 		190B90F12852378300A015A2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		191980452855F4990023D880 /* CollectionMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMenuPresenter.swift; sourceTree = "<group>"; };
+		191980472855F4C00023D880 /* CollectionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMenuViewController.swift; sourceTree = "<group>"; };
+		191980492855F4FA0023D880 /* CollectionViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCustomCell.swift; sourceTree = "<group>"; };
 		199A26952853C09900FACB74 /* DetailTableViewModulePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewModulePresentor.swift; sourceTree = "<group>"; };
 		199A26972853C0EF00FACB74 /* DetailTableViewModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewModuleViewController.swift; sourceTree = "<group>"; };
 		19ECBF102854B55D00F98D58 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -80,7 +86,7 @@
 			children = (
 				190B90F02852375A00A015A2 /* NetworkService */,
 				190B90ED2852366E00A015A2 /* Model */,
-				190B90EB285230DF00A015A2 /* TableViewModule */,
+				190B90EB285230DF00A015A2 /* PresentationLayer */,
 				190B90D728522A3E00A015A2 /* Assets.xcassets */,
 				190B90CE28522A3E00A015A2 /* AppDelegate.swift */,
 				190B90D928522A3E00A015A2 /* LaunchScreen.storyboard */,
@@ -89,24 +95,25 @@
 			path = myProjectMVP;
 			sourceTree = "<group>";
 		};
-		190B90EB285230DF00A015A2 /* TableViewModule */ = {
+		190B90EB285230DF00A015A2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				19ECBF142854B90C00F98D58 /* ProfileUser */,
-				199A26942853C05500FACB74 /* Detail */,
-				190B90EC285230F700A015A2 /* Main */,
+				191980442855F45D0023D880 /* CollectionMenuModule */,
+				19ECBF142854B90C00F98D58 /* ProfileUserModule */,
+				199A26942853C05500FACB74 /* DetailModule */,
+				190B90EC285230F700A015A2 /* MainMenuModel */,
 			);
-			path = TableViewModule;
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
-		190B90EC285230F700A015A2 /* Main */ = {
+		190B90EC285230F700A015A2 /* MainMenuModel */ = {
 			isa = PBXGroup;
 			children = (
 				190B90E728522FF500A015A2 /* MainTableViewModulePresenter.swift */,
 				190B90D228522A3E00A015A2 /* MainTableModuleViewController.swift */,
-				190B90E92852303800A015A2 /* TableViewCustomCell.swift */,
+				191980432855F3A50023D880 /* View */,
 			);
-			path = Main;
+			path = MainMenuModel;
 			sourceTree = "<group>";
 		};
 		190B90ED2852366E00A015A2 /* Model */ = {
@@ -127,22 +134,48 @@
 			path = NetworkService;
 			sourceTree = "<group>";
 		};
-		199A26942853C05500FACB74 /* Detail */ = {
+		191980432855F3A50023D880 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				190B90E92852303800A015A2 /* TableViewCustomCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		191980442855F45D0023D880 /* CollectionMenuModule */ = {
+			isa = PBXGroup;
+			children = (
+				191980452855F4990023D880 /* CollectionMenuPresenter.swift */,
+				191980472855F4C00023D880 /* CollectionMenuViewController.swift */,
+				1919804B2855F4FF0023D880 /* View */,
+			);
+			path = CollectionMenuModule;
+			sourceTree = "<group>";
+		};
+		1919804B2855F4FF0023D880 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				191980492855F4FA0023D880 /* CollectionViewCustomCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		199A26942853C05500FACB74 /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
 				199A26952853C09900FACB74 /* DetailTableViewModulePresentor.swift */,
 				199A26972853C0EF00FACB74 /* DetailTableViewModuleViewController.swift */,
 			);
-			path = Detail;
+			path = DetailModule;
 			sourceTree = "<group>";
 		};
-		19ECBF142854B90C00F98D58 /* ProfileUser */ = {
+		19ECBF142854B90C00F98D58 /* ProfileUserModule */ = {
 			isa = PBXGroup;
 			children = (
 				19ECBF152854B93400F98D58 /* ProfileUserPresenter.swift */,
 				19ECBF172854B96300F98D58 /* ProfileUserViewController.swift */,
 			);
-			path = ProfileUser;
+			path = ProfileUserModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +260,7 @@
 			files = (
 				190B90EF2852368400A015A2 /* Eat.swift in Sources */,
 				19ECBF182854B96300F98D58 /* ProfileUserViewController.swift in Sources */,
+				1919804A2855F4FA0023D880 /* CollectionViewCustomCell.swift in Sources */,
 				190B90D328522A3E00A015A2 /* MainTableModuleViewController.swift in Sources */,
 				190B90F22852378300A015A2 /* Network.swift in Sources */,
 				190B90E828522FF500A015A2 /* MainTableViewModulePresenter.swift in Sources */,
@@ -236,7 +270,9 @@
 				19ECBF132854B67800F98D58 /* UserNetwork.swift in Sources */,
 				19ECBF162854B93400F98D58 /* ProfileUserPresenter.swift in Sources */,
 				190B90CF28522A3E00A015A2 /* AppDelegate.swift in Sources */,
+				191980482855F4C00023D880 /* CollectionMenuViewController.swift in Sources */,
 				199A26982853C0EF00FACB74 /* DetailTableViewModuleViewController.swift in Sources */,
+				191980462855F4990023D880 /* CollectionMenuPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

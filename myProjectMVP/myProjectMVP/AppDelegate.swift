@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let firstPresenter: MainTableViewModulePresenterProtocol = MainTableViewModulePresenter()
         let firstNC = UINavigationController(rootViewController: MainTableModuleViewController(presenter: firstPresenter))
         
-        let secondNC = UINavigationController(rootViewController: MainTableModuleViewController(presenter: firstPresenter))
+        let secondPresenter:CollectionMenuPresenterProtocol = CollectionMenuPresenter()
+        let secondNC = UINavigationController(rootViewController: CollectionMenuViewController(presenter: secondPresenter))
         
         let thridPresentor: ProfileUserViewModulePresenterProtocol = ProfileUserViewModulePresentor()
         let thirdNC = UINavigationController(rootViewController: ProfileUserViewController(presenter: thridPresentor))

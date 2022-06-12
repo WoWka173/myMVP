@@ -32,6 +32,11 @@ class MainTableModuleViewController: UIViewController {
         presenter.viewDidLoad()
         self.navigationItem.title = "Меню"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
 }
 
