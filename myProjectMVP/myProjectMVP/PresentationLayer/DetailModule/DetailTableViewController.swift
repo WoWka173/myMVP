@@ -8,9 +8,10 @@
 import UIKit
 import SnapKit
 
-class DetailTableViewModuleViewController: UIViewController {
+class DetailTableViewController: UIViewController {
     
-    private var presenter: DetailTableViewModulePresenterProtocol
+    //MARK: - Properties
+    private var presenter: DetailTablePresenterProtocol
     
     private lazy var descriptionLabel: UILabel = {
         let lable = UILabel()
@@ -26,7 +27,8 @@ class DetailTableViewModuleViewController: UIViewController {
         return imageView
     }()
     
-    init(presenter: DetailTableViewModulePresenterProtocol){
+    //MARK: - Init
+    init(presenter: DetailTablePresenterProtocol){
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -35,6 +37,7 @@ class DetailTableViewModuleViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
@@ -47,6 +50,7 @@ class DetailTableViewModuleViewController: UIViewController {
         
     }
     
+    //MARK: - Method
     private func setupDescriptionLable() {
         view.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { make in
@@ -65,7 +69,8 @@ class DetailTableViewModuleViewController: UIViewController {
     }
 }
 
-extension DetailTableViewModuleViewController: DetailTableViewModuleViewProtocol {
+//MARK: - DetailTableViewProtocol
+extension DetailTableViewController: DetailTableViewProtocol {
     
     func setContent(title: String, description: String, image: UIImage) {
         self.navigationItem.title = title

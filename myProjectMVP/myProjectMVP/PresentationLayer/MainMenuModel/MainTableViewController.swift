@@ -7,9 +7,10 @@
 
 import UIKit
 
-class MainTableModuleViewController: UIViewController {
+class MainTableViewController: UIViewController {
     
-    private var presenter: MainTableViewModulePresenterProtocol
+    //MARK: - Properties
+    private var presenter: MainTablePresenterProtocol
     
     private var tableView: UITableView = {
         let tableView = UITableView()
@@ -17,7 +18,8 @@ class MainTableModuleViewController: UIViewController {
         return tableView
     }()
     
-    init(presenter: MainTableViewModulePresenterProtocol) {
+    //MARK: - Init
+    init(presenter: MainTablePresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,7 +27,8 @@ class MainTableModuleViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
@@ -40,7 +43,8 @@ class MainTableModuleViewController: UIViewController {
 
 }
 
-extension MainTableModuleViewController: MainTableViewModuleViewProtocol {
+//MARK - MainTableViewProtocol
+extension MainTableViewController: MainTableViewProtocol {
     
     func setupTableView() {
         view.addSubview(tableView)
@@ -56,7 +60,8 @@ extension MainTableModuleViewController: MainTableViewModuleViewProtocol {
     }
 }
 
-extension MainTableModuleViewController: UITableViewDelegate, UITableViewDataSource {
+//MARK: - UITableViewDelegate, UITableViewDataSource
+extension MainTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.numberOfRowInSection()

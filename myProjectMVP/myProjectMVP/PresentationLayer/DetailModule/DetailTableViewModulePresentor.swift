@@ -7,26 +7,30 @@
 import Foundation
 import UIKit
 
-// MARK: View -
-protocol DetailTableViewModuleViewProtocol: AnyObject {
+// MARK: - Protocols
+protocol DetailTableViewProtocol: AnyObject {
     func setContent(title: String, description: String, image: UIImage)
 }
 
-//MARK: Presentor -
-protocol DetailTableViewModulePresenterProtocol: AnyObject {
-    var view: DetailTableViewModuleViewProtocol? { get set }
+
+protocol DetailTablePresenterProtocol: AnyObject {
+    var view: DetailTableViewProtocol? { get set }
     func viewDidLoad()
 }
 
-class DetailTableViewModulePresenter: DetailTableViewModulePresenterProtocol {
+//MARK: - Presenter
+class DetailTablePresenter: DetailTablePresenterProtocol {
    
-    weak var view: DetailTableViewModuleViewProtocol?
+    //MARK: - Properties
+    weak var view: DetailTableViewProtocol?
     private var model: Eat
     
+    //MARK: - Init
     init(model: Eat) {
         self.model = model
     }
     
+    //MARK: - Methods
     func viewDidLoad() {
         view?.setContent(title: model.name, description: model.description, image: model.image)
     }

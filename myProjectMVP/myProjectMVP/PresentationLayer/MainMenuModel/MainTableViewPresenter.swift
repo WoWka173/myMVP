@@ -7,29 +7,34 @@
 import UIKit
 import Foundation
 
-protocol MainTableViewModuleViewProtocol: AnyObject {
+//MARK - Protocol
+protocol MainTableViewProtocol: AnyObject {
     func setupTableView()
     func reloadTableView()
 }
 
-protocol MainTableViewModulePresenterProtocol: AnyObject {
-    var view: MainTableViewModuleViewProtocol? { get set }
+protocol MainTablePresenterProtocol: AnyObject {
+    var view: MainTableViewProtocol? { get set }
     func viewDidLoad()
     func numberOfRowInSection() -> Int
     func cellForRow(_ tableView: UITableView, cellForRow indexPath: IndexPath) -> UITableViewCell
     func didSelectRowAt(indexPath: IndexPath, _ navigationController: UINavigationController)
 }
 
-class MainTableViewModulePresenter: MainTableViewModulePresenterProtocol {
-   
-    weak var view: MainTableViewModuleViewProtocol?
+//MARK - Presenter
+class MainTableViewPresenter: MainTablePresenterProtocol {
+    
+    //MARK: - Properties
+    weak var view: MainTableViewProtocol?
     private var service: Network?
     private var model: [Eat] = []
     
+    //MARK: - Init
     init() {
         self.service = Network()
     }
     
+    //MARK: - Methods
     func viewDidLoad() {
         fetchEat()
         view?.setupTableView()
@@ -47,8 +52,8 @@ class MainTableViewModulePresenter: MainTableViewModulePresenterProtocol {
     }
     
     func didSelectRowAt(indexPath: IndexPath, _ navigationController: UINavigationController) {
-        let presenter = DetailTableViewModulePresenter(model: model[indexPath.row])
-        let vc = DetailTableViewModuleViewController(presenter: presenter)
+        let presenter = DetailTablePresenter(model: model[indexPath.row])
+        let vc = DetailTableViewController(presenter: presenter)
         navigationController.pushViewController(vc, animated: true)
     }
     

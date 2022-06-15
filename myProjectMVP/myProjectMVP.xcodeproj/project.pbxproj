@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		190B90CF28522A3E00A015A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90CE28522A3E00A015A2 /* AppDelegate.swift */; };
-		190B90D328522A3E00A015A2 /* MainTableModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90D228522A3E00A015A2 /* MainTableModuleViewController.swift */; };
+		190B90D328522A3E00A015A2 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90D228522A3E00A015A2 /* MainTableViewController.swift */; };
 		190B90D828522A3E00A015A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190B90D728522A3E00A015A2 /* Assets.xcassets */; };
 		190B90DB28522A3E00A015A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190B90D928522A3E00A015A2 /* LaunchScreen.storyboard */; };
 		190B90E428522EED00A015A2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 190B90E328522EED00A015A2 /* SnapKit */; };
-		190B90E828522FF500A015A2 /* MainTableViewModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90E728522FF500A015A2 /* MainTableViewModulePresenter.swift */; };
+		190B90E828522FF500A015A2 /* MainTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90E728522FF500A015A2 /* MainTableViewPresenter.swift */; };
 		190B90EA2852303800A015A2 /* TableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90E92852303800A015A2 /* TableViewCustomCell.swift */; };
 		190B90EF2852368400A015A2 /* Eat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90EE2852368400A015A2 /* Eat.swift */; };
 		190B90F22852378300A015A2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90F12852378300A015A2 /* Network.swift */; };
 		191980462855F4990023D880 /* CollectionMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191980452855F4990023D880 /* CollectionMenuPresenter.swift */; };
 		191980482855F4C00023D880 /* CollectionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191980472855F4C00023D880 /* CollectionMenuViewController.swift */; };
 		1919804A2855F4FA0023D880 /* CollectionViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191980492855F4FA0023D880 /* CollectionViewCustomCell.swift */; };
+		191CFA8028588D4400A1D1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B90CE28522A3E00A015A2 /* AppDelegate.swift */; };
+		1947385E285888CA00399A89 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1947385D285888CA00399A89 /* CustomTabBar.swift */; };
 		197ED6082853918F002F7CD9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 197ED6072853918F002F7CD9 /* SnapKit */; };
 		199A26962853C09900FACB74 /* DetailTableViewModulePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A26952853C09900FACB74 /* DetailTableViewModulePresentor.swift */; };
-		199A26982853C0EF00FACB74 /* DetailTableViewModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A26972853C0EF00FACB74 /* DetailTableViewModuleViewController.swift */; };
+		199A26982853C0EF00FACB74 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A26972853C0EF00FACB74 /* DetailTableViewController.swift */; };
 		19ECBF0F2854989C00F98D58 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 19ECBF0E2854989C00F98D58 /* SnapKit */; };
 		19ECBF112854B55D00F98D58 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ECBF102854B55D00F98D58 /* User.swift */; };
 		19ECBF132854B67800F98D58 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ECBF122854B67700F98D58 /* UserNetwork.swift */; };
@@ -32,19 +33,20 @@
 /* Begin PBXFileReference section */
 		190B90CB28522A3E00A015A2 /* myProjectMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myProjectMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		190B90CE28522A3E00A015A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		190B90D228522A3E00A015A2 /* MainTableModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableModuleViewController.swift; sourceTree = "<group>"; };
+		190B90D228522A3E00A015A2 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		190B90D728522A3E00A015A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		190B90DA28522A3E00A015A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		190B90DC28522A3E00A015A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		190B90E728522FF500A015A2 /* MainTableViewModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewModulePresenter.swift; sourceTree = "<group>"; };
+		190B90E728522FF500A015A2 /* MainTableViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewPresenter.swift; sourceTree = "<group>"; };
 		190B90E92852303800A015A2 /* TableViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCustomCell.swift; sourceTree = "<group>"; };
 		190B90EE2852368400A015A2 /* Eat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat.swift; sourceTree = "<group>"; };
 		190B90F12852378300A015A2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		191980452855F4990023D880 /* CollectionMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMenuPresenter.swift; sourceTree = "<group>"; };
 		191980472855F4C00023D880 /* CollectionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMenuViewController.swift; sourceTree = "<group>"; };
 		191980492855F4FA0023D880 /* CollectionViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCustomCell.swift; sourceTree = "<group>"; };
+		1947385D285888CA00399A89 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		199A26952853C09900FACB74 /* DetailTableViewModulePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewModulePresentor.swift; sourceTree = "<group>"; };
-		199A26972853C0EF00FACB74 /* DetailTableViewModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewModuleViewController.swift; sourceTree = "<group>"; };
+		199A26972853C0EF00FACB74 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		19ECBF102854B55D00F98D58 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		19ECBF122854B67700F98D58 /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		19ECBF152854B93400F98D58 /* ProfileUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserPresenter.swift; sourceTree = "<group>"; };
@@ -87,9 +89,7 @@
 				190B90F02852375A00A015A2 /* NetworkService */,
 				190B90ED2852366E00A015A2 /* Model */,
 				190B90EB285230DF00A015A2 /* PresentationLayer */,
-				190B90D728522A3E00A015A2 /* Assets.xcassets */,
-				190B90CE28522A3E00A015A2 /* AppDelegate.swift */,
-				190B90D928522A3E00A015A2 /* LaunchScreen.storyboard */,
+				1947385B2858883700399A89 /* Application */,
 				190B90DC28522A3E00A015A2 /* Info.plist */,
 			);
 			path = myProjectMVP;
@@ -98,6 +98,7 @@
 		190B90EB285230DF00A015A2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				1947385C2858887B00399A89 /* TabBar */,
 				191980442855F45D0023D880 /* CollectionMenuModule */,
 				19ECBF142854B90C00F98D58 /* ProfileUserModule */,
 				199A26942853C05500FACB74 /* DetailModule */,
@@ -109,8 +110,8 @@
 		190B90EC285230F700A015A2 /* MainMenuModel */ = {
 			isa = PBXGroup;
 			children = (
-				190B90E728522FF500A015A2 /* MainTableViewModulePresenter.swift */,
-				190B90D228522A3E00A015A2 /* MainTableModuleViewController.swift */,
+				190B90E728522FF500A015A2 /* MainTableViewPresenter.swift */,
+				190B90D228522A3E00A015A2 /* MainTableViewController.swift */,
 				191980432855F3A50023D880 /* View */,
 			);
 			path = MainMenuModel;
@@ -160,11 +161,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1947385B2858883700399A89 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				190B90D728522A3E00A015A2 /* Assets.xcassets */,
+				190B90CE28522A3E00A015A2 /* AppDelegate.swift */,
+				190B90D928522A3E00A015A2 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1947385C2858887B00399A89 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1947385D285888CA00399A89 /* CustomTabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		199A26942853C05500FACB74 /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
 				199A26952853C09900FACB74 /* DetailTableViewModulePresentor.swift */,
-				199A26972853C0EF00FACB74 /* DetailTableViewModuleViewController.swift */,
+				199A26972853C0EF00FACB74 /* DetailTableViewController.swift */,
 			);
 			path = DetailModule;
 			sourceTree = "<group>";
@@ -261,17 +280,18 @@
 				190B90EF2852368400A015A2 /* Eat.swift in Sources */,
 				19ECBF182854B96300F98D58 /* ProfileUserViewController.swift in Sources */,
 				1919804A2855F4FA0023D880 /* CollectionViewCustomCell.swift in Sources */,
-				190B90D328522A3E00A015A2 /* MainTableModuleViewController.swift in Sources */,
+				190B90D328522A3E00A015A2 /* MainTableViewController.swift in Sources */,
+				1947385E285888CA00399A89 /* CustomTabBar.swift in Sources */,
 				190B90F22852378300A015A2 /* Network.swift in Sources */,
-				190B90E828522FF500A015A2 /* MainTableViewModulePresenter.swift in Sources */,
+				190B90E828522FF500A015A2 /* MainTableViewPresenter.swift in Sources */,
 				190B90EA2852303800A015A2 /* TableViewCustomCell.swift in Sources */,
+				191CFA8028588D4400A1D1EF /* AppDelegate.swift in Sources */,
 				19ECBF112854B55D00F98D58 /* User.swift in Sources */,
 				199A26962853C09900FACB74 /* DetailTableViewModulePresentor.swift in Sources */,
 				19ECBF132854B67800F98D58 /* UserNetwork.swift in Sources */,
 				19ECBF162854B93400F98D58 /* ProfileUserPresenter.swift in Sources */,
-				190B90CF28522A3E00A015A2 /* AppDelegate.swift in Sources */,
 				191980482855F4C00023D880 /* CollectionMenuViewController.swift in Sources */,
-				199A26982853C0EF00FACB74 /* DetailTableViewModuleViewController.swift in Sources */,
+				199A26982853C0EF00FACB74 /* DetailTableViewController.swift in Sources */,
 				191980462855F4990023D880 /* CollectionMenuPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +439,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,6 +469,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

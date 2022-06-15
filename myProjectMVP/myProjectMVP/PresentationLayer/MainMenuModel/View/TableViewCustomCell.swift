@@ -8,7 +8,8 @@ import SnapKit
 import UIKit
 
 class TableViewCustomCell: UITableViewCell {
-
+    
+    //MARK: - Properties
     private lazy var label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -23,6 +24,7 @@ class TableViewCustomCell: UITableViewCell {
         return imageView
     }()
     
+    //MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupProductImageView()
@@ -35,6 +37,7 @@ class TableViewCustomCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Methods
     func setContent(name: String, image: UIImage) {
         label.text = name
         productImageView.image = image
@@ -56,6 +59,4 @@ class TableViewCustomCell: UITableViewCell {
             make.top.equalToSuperview().inset(10)
         }
     }
-    
-    
 }

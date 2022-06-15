@@ -30,6 +30,7 @@ final class CollectionMenuPresenter: CollectionMenuPresenterProtocol {
     private var service: Network?
     private var model: [Eat] = []
     
+    //MARK: - unit
     init() {
         self.service = Network()
     }
@@ -46,13 +47,14 @@ final class CollectionMenuPresenter: CollectionMenuPresenterProtocol {
     
     func cellForItemAt(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCustomCell", for: indexPath) as! CollectionViewCustomCell
-        cell.setContent(name: model[indexPath.row].name, description: model[indexPath.row].description, image: model[indexPath.row].image)
+        cell.model = CollectionViewCustomCellModel(name: model[indexPath.row].name, image: model[indexPath.row].image)
+        cell.setContent()
         return cell
     }
     
     func didSelectItemAt(indexPath: IndexPath, _ navigationController: UINavigationController) {
-        let presenter = DetailTableViewModulePresenter(model: model[indexPath.row])
-        let vc = DetailTableViewModuleViewController(presenter: presenter)
+        let presenter = DetailTablePresenter(model: model[indexPath.row])
+        let vc = DetailTableViewController(presenter: presenter)
         navigationController.pushViewController(vc, animated: true)
     }
     

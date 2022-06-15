@@ -73,6 +73,7 @@ class ProfileUserViewController: UIViewController {
         userAdress.text = "Email Adress: " + adress
         userImage.image = image
         
+        
     }
     
     private func setupView() {

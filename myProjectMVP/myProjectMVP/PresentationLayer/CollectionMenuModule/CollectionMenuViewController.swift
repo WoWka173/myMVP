@@ -16,8 +16,8 @@ final class CollectionMenuViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 30
-        layout.minimumLineSpacing = 50
+        layout.minimumInteritemSpacing = 1
+        layout.minimumLineSpacing = 100
         layout.itemSize = CGSize(width: view.frame.size.width/1.5, height: view.frame.size.height/2)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)

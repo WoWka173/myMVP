@@ -8,9 +8,18 @@
 import UIKit
 import SnapKit
 
+struct CollectionViewCustomCellModel {
+    
+    let name: String
+    let image: UIImage
+}
+
 final class CollectionViewCustomCell: UICollectionViewCell {
     
     //MARK: - Properties
+    
+    var model: CollectionViewCustomCellModel?
+    
     private lazy var nameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.textAlignment = .center
@@ -37,14 +46,14 @@ final class CollectionViewCustomCell: UICollectionViewCell {
     }
     
     //MARK - Methods
-    func setContent(name: String, description: String, image: UIImage) {
-        nameLabel.text = name
-        productImage.image = image
+    func setContent() {
+        nameLabel.text = self.model?.name
+        productImage.image = self.model?.image
     }
     
     private func setupCell(){
         contentView.backgroundColor = .white
-        contentView.layer.cornerRadius = 10
+        contentView.layer.cornerRadius = 20
         contentView.layer.shadowRadius = 10
         contentView.layer.shadowOpacity = 0.2
         contentView.layer.shadowOffset = CGSize(width: 3, height: 3)
@@ -56,6 +65,7 @@ final class CollectionViewCustomCell: UICollectionViewCell {
     private func setupProductImage(){
         addSubview(productImage)
         productImage.snp.makeConstraints { make in
+            
             make.top.right.left.bottom.equalToSuperview()
             make.height.equalTo(50)
             make.width.equalTo(50)
